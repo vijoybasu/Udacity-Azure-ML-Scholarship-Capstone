@@ -7,33 +7,16 @@ scoring_uri = 'http://e8a9175a-fc05-4608-aef8-f19fbc252ffb.southcentralus.azurec
 # If the service is authenticated, set the key or token
 key = '6Pw22x1AEL0UqLbyso9EjGK0HiybwZhs'
 
-# Two sets of data to score, so we get two results back
-data = {"data":
-        [{
-                "age":55
-		"anaemia":0
-		"creatinine_phosphokinase":981
-		"diabetes":0
-		"ejection_fraction":50
-		"high_blood_pressure":1
-		"platelets":265000
-		"serum_creatinine":135
-		"serum_sodium":132
-		"sex":0
-		"smoking":1
-		"time":80}
-        ]
-    }
 # Convert to JSON string
-input_data = json.dumps(data)
-with open("data.json", "w") as _f:
-    _f.write(input_data)
+with open("input_data.json", "w") as _f:
+	input_data_json = json.load(f)
+    
 
 # Set the content type
 headers = {'Content-Type': 'application/json'}
 # If authentication is enabled, set the authorization header
-headers['Authorization'] = f'Bearer {key}'
+#headers['Authorization'] = f'Bearer {key}'
 
 # Make the request and display the response
-resp = requests.post(scoring_uri, input_data, headers=headers)
+resp = requests.post(scoring_uri, input_data_json, headers=headers)
 print(resp.json())
