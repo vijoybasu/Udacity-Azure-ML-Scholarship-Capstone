@@ -5,6 +5,9 @@
 *TODO:* Write a short introduction to your project.
 
 ## Project Set Up and Installation
+
+Heart Failure Dataset from UCI Machine Learning Repository, https://archive.ics.uci.edu/ml/datasets/Heart+failure+clinical+records
+
 *OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
 
 ## Dataset
