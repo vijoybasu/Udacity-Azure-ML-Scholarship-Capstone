@@ -160,7 +160,6 @@ The model could be further improved by playing around with more hyper-parameters
 
 #### RunDetails widget output
 ![image](https://user-images.githubusercontent.com/81923226/115027306-2c1f2180-9ee1-11eb-831c-688da188f4d1.png)
-![image](https://user-images.githubusercontent.com/81923226/115027348-38a37a00-9ee1-11eb-908d-f50b05d43687.png)
 ![image](https://user-images.githubusercontent.com/81923226/115027356-3d682e00-9ee1-11eb-90c6-ef99e2127907.png)
 ![image](https://user-images.githubusercontent.com/81923226/115027370-435e0f00-9ee1-11eb-9845-3b65a12d1fc3.png)
 
