@@ -147,12 +147,45 @@ hyperdrive_run_config = HyperDriveConfig(run_config=estimator, hyperparameter_sa
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 
-The HyperDrive Run with SK Learn's Logistic Regression was able to achieve a better accuracy of `0.92`
+The HyperDrive Run with SK Learn's Logistic Regression was able to achieve a better accuracy of `0.92`. 
+The model could be further improved by playing around with more hyper-parameters of Logistic Regression such as penalty,class_weight, n_jobs etc.
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+![image](https://user-images.githubusercontent.com/81923226/115027181-03972780-9ee1-11eb-9e6f-cbba1015c882.png)
+#### Accuracy of 0.92 achieved.
+![image](https://user-images.githubusercontent.com/81923226/115027205-0a259f00-9ee1-11eb-8476-f273812c09af.png)
+![image](https://user-images.githubusercontent.com/81923226/115027229-13167080-9ee1-11eb-8406-7d8934e62012.png)
+![image](https://user-images.githubusercontent.com/81923226/115027278-2295b980-9ee1-11eb-81f7-c3010b32601a.png)
+![image](https://user-images.githubusercontent.com/81923226/115027290-275a6d80-9ee1-11eb-900a-afc5a790dc42.png)
+
+#### RunDetails widget output
+![image](https://user-images.githubusercontent.com/81923226/115027306-2c1f2180-9ee1-11eb-831c-688da188f4d1.png)
+![image](https://user-images.githubusercontent.com/81923226/115027348-38a37a00-9ee1-11eb-908d-f50b05d43687.png)
+![image](https://user-images.githubusercontent.com/81923226/115027356-3d682e00-9ee1-11eb-90c6-ef99e2127907.png)
+![image](https://user-images.githubusercontent.com/81923226/115027370-435e0f00-9ee1-11eb-9845-3b65a12d1fc3.png)
+
 
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+
+We compare and it is clearly seen that the model obtained by the HyperDrive config run obtains an accuracy of `0.92` using the SKLearn's Logistic Regression.
+
+We shall go ahead and deploy this particular model and test the endpoint.
+
+#### Deployment Screenshots as below:
+
+![image](https://user-images.githubusercontent.com/81923226/115027501-6c7e9f80-9ee1-11eb-8e0c-d0468e8158b0.png)
+![image](https://user-images.githubusercontent.com/81923226/115027514-70aabd00-9ee1-11eb-8e4a-e990233321e8.png)
+![image](https://user-images.githubusercontent.com/81923226/115027520-73a5ad80-9ee1-11eb-81aa-e9e720f066c2.png)
+![image](https://user-images.githubusercontent.com/81923226/115027531-77393480-9ee1-11eb-9e05-35379434c542.png)
+![image](https://user-images.githubusercontent.com/81923226/115027543-7accbb80-9ee1-11eb-8d01-75f8f11eac66.png)
+![image](https://user-images.githubusercontent.com/81923226/115027557-7ef8d900-9ee1-11eb-94ee-25adb7617881.png)
+![image](https://user-images.githubusercontent.com/81923226/115027703-ab145a00-9ee1-11eb-8445-26eb13d78e68.png)
+
+
+#### Testing Model Endpoint
+
+The model endpoint is tested using a sample of row values in the test dataset. The output is obtained as `[1,0]` indicating that the said person will indeed have a death event owing to his physical factors.
+![image](https://user-images.githubusercontent.com/81923226/115027967-f9295d80-9ee1-11eb-8972-e9aabce8fd43.png)
+
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
@@ -162,3 +195,78 @@ The HyperDrive Run with SK Learn's Logistic Regression was able to achieve a bet
 
 ## Future Improvements
 Benchmarking can be done using Apache Benchmark command-line tool to keep the performance of the model in check and above a standard level. It is used to determine the response time in seconds for the model that is deployed. Additionally, you could try different models to get the best possible one. If we reduced the duration of the experiment or increased the number of processes running in parallel then the experiment will be fast and time can be save - however resource costs may increase. The use of the Kubernetes service can be helpful in case we add more data to the existing dataset. Lastly, the exploration of possibly using Deep Learning to get to a more accurate model. Lastly, it would be even better if we could get more data records from electronic health records. This project took approximately 5 hours to complete.
+
+
+## ALL SCREENSHOTS
+![image](https://user-images.githubusercontent.com/81923226/115028215-3beb3580-9ee2-11eb-8ad0-7b2f103cf35c.png)
+![image](https://user-images.githubusercontent.com/81923226/115028228-40175300-9ee2-11eb-92fe-2eb7ae3e86e6.png)
+![image](https://user-images.githubusercontent.com/81923226/115028248-44437080-9ee2-11eb-86a4-1cc394f79d30.png)
+![image](https://user-images.githubusercontent.com/81923226/115028262-47d6f780-9ee2-11eb-8c8b-0b4457d97358.png)
+![image](https://user-images.githubusercontent.com/81923226/115028279-4b6a7e80-9ee2-11eb-89dd-cd748d2cd646.png)
+![image](https://user-images.githubusercontent.com/81923226/115028299-502f3280-9ee2-11eb-9e64-54cde62fddbe.png)
+![image](https://user-images.githubusercontent.com/81923226/115028313-53c2b980-9ee2-11eb-9b73-ddc4bf2e6acc.png)
+![image](https://user-images.githubusercontent.com/81923226/115028331-59200400-9ee2-11eb-802f-90d9066daa95.png)
+![image](https://user-images.githubusercontent.com/81923226/115028351-5e7d4e80-9ee2-11eb-8085-e48f1b0a1780.png)
+![image](https://user-images.githubusercontent.com/81923226/115028382-65a45c80-9ee2-11eb-84d7-034da46ccd5a.png)
+![image](https://user-images.githubusercontent.com/81923226/115028396-6937e380-9ee2-11eb-98bd-4424691d90a8.png)
+![image](https://user-images.githubusercontent.com/81923226/115028410-6ccb6a80-9ee2-11eb-898c-a5e59d5c03df.png)
+![image](https://user-images.githubusercontent.com/81923226/115028418-7228b500-9ee2-11eb-83e0-03310c3fe993.png)
+![image](https://user-images.githubusercontent.com/81923226/115028428-75bc3c00-9ee2-11eb-950b-274e9221ea5c.png)
+![image](https://user-images.githubusercontent.com/81923226/115028436-79e85980-9ee2-11eb-861f-badf87b942e5.png)
+![image](https://user-images.githubusercontent.com/81923226/115028450-7e147700-9ee2-11eb-9e74-47d75652b743.png)
+![image](https://user-images.githubusercontent.com/81923226/115028461-81a7fe00-9ee2-11eb-8a15-7e62de483f73.png)
+![image](https://user-images.githubusercontent.com/81923226/115028476-866cb200-9ee2-11eb-9b08-a9bf7c34daa9.png)
+![image](https://user-images.githubusercontent.com/81923226/115028488-8a98cf80-9ee2-11eb-8ddf-1ab78b6554f5.png)
+
+### AutoML Run
+![image](https://user-images.githubusercontent.com/81923226/115028510-92f10a80-9ee2-11eb-86e7-dc9030e02a76.png)
+![image](https://user-images.githubusercontent.com/81923226/115028523-96849180-9ee2-11eb-8bbe-8192b87d02d2.png)
+![image](https://user-images.githubusercontent.com/81923226/115028531-9a181880-9ee2-11eb-91c2-54e503426b7b.png)
+![image](https://user-images.githubusercontent.com/81923226/115028545-9dab9f80-9ee2-11eb-9679-04eb5bbb566d.png)
+![image](https://user-images.githubusercontent.com/81923226/115028558-a13f2680-9ee2-11eb-95bf-c51fc2e98ad6.png)
+![image](https://user-images.githubusercontent.com/81923226/115028571-a4d2ad80-9ee2-11eb-81ae-944422fc2085.png)
+![image](https://user-images.githubusercontent.com/81923226/115028581-a8663480-9ee2-11eb-8a0b-42fe104da202.png)
+![image](https://user-images.githubusercontent.com/81923226/115028606-ac925200-9ee2-11eb-9406-cacf82a1eed4.png)
+![image](https://user-images.githubusercontent.com/81923226/115028622-b1570600-9ee2-11eb-8691-e42258f902e7.png)
+#### VOTING ENSEMBLE with 0.879 accuracy
+![image](https://user-images.githubusercontent.com/81923226/115028643-bb790480-9ee2-11eb-9b90-6d1ecd6fa2b6.png)
+![image](https://user-images.githubusercontent.com/81923226/115028660-bfa52200-9ee2-11eb-8b9f-e309f7bf003c.png)
+![image](https://user-images.githubusercontent.com/81923226/115028666-c338a900-9ee2-11eb-9cc1-204a3a57fc55.png)
+![image](https://user-images.githubusercontent.com/81923226/115028678-c6cc3000-9ee2-11eb-986b-cdf46915236d.png)
+![image](https://user-images.githubusercontent.com/81923226/115028694-caf84d80-9ee2-11eb-9e67-e09f26e33991.png)
+![image](https://user-images.githubusercontent.com/81923226/115028704-ce8bd480-9ee2-11eb-97f0-1e7d6ab25c88.png)
+![image](https://user-images.githubusercontent.com/81923226/115028722-d481b580-9ee2-11eb-8a6f-bddbaf3fd1eb.png)
+
+
+### HyperDrive Run
+
+![image](https://user-images.githubusercontent.com/81923226/115028794-e8c5b280-9ee2-11eb-9fe6-ffd8dd40cb2a.png)
+![image](https://user-images.githubusercontent.com/81923226/115028814-ecf1d000-9ee2-11eb-8867-df77d7a3331e.png)
+![image](https://user-images.githubusercontent.com/81923226/115028823-f0855700-9ee2-11eb-890e-7f6873a46d18.png)
+![image](https://user-images.githubusercontent.com/81923226/115028842-f4b17480-9ee2-11eb-8a0e-241f0bd43f83.png)
+![image](https://user-images.githubusercontent.com/81923226/115028857-f844fb80-9ee2-11eb-9f55-c26c16f65d63.png)
+![image](https://user-images.githubusercontent.com/81923226/115028868-fbd88280-9ee2-11eb-9b8a-93dc6ad3fd73.png)
+![image](https://user-images.githubusercontent.com/81923226/115028892-009d3680-9ee3-11eb-8f3d-849972e58ac1.png)
+#### HyperDrive run achieves 0.92 accuracy
+![image](https://user-images.githubusercontent.com/81923226/115028907-05fa8100-9ee3-11eb-8dee-7c5c0e0475b7.png)
+![image](https://user-images.githubusercontent.com/81923226/115028918-098e0800-9ee3-11eb-9fd4-e3880443a20b.png)
+![image](https://user-images.githubusercontent.com/81923226/115028930-0c88f880-9ee3-11eb-8552-effc6d214c22.png)
+![image](https://user-images.githubusercontent.com/81923226/115028942-0f83e900-9ee3-11eb-97ca-35dea58446c4.png)
+
+![image](https://user-images.githubusercontent.com/81923226/115029210-65589100-9ee3-11eb-975f-c2470e03a748.png)
+![image](https://user-images.githubusercontent.com/81923226/115029248-6db0cc00-9ee3-11eb-963a-edbc61cba7f0.png)
+![image](https://user-images.githubusercontent.com/81923226/115029263-70abbc80-9ee3-11eb-88cd-56c3c255168d.png)
+![image](https://user-images.githubusercontent.com/81923226/115029280-74d7da00-9ee3-11eb-8402-cca4bbed9d7a.png)
+![image](https://user-images.githubusercontent.com/81923226/115029293-786b6100-9ee3-11eb-8f35-e4c99bb1bf33.png)
+![image](https://user-images.githubusercontent.com/81923226/115029304-7b665180-9ee3-11eb-84bc-72bdf9bc4c75.png)
+![image](https://user-images.githubusercontent.com/81923226/115029322-7e614200-9ee3-11eb-93a8-ac628eddbcbb.png)
+![image](https://user-images.githubusercontent.com/81923226/115029350-84efb980-9ee3-11eb-80ec-3c453673b3df.png)
+![image](https://user-images.githubusercontent.com/81923226/115029379-89b46d80-9ee3-11eb-91b9-41e29250afb5.png)
+
+#### Deleting the compute and the model
+![image](https://user-images.githubusercontent.com/81923226/115029407-920ca880-9ee3-11eb-89cc-78f2e29aae95.png)
+
+#### Active REST Endpoint
+![image](https://user-images.githubusercontent.com/81923226/115029442-9a64e380-9ee3-11eb-9efe-e97bfb2b6467.png)
+![image](https://user-images.githubusercontent.com/81923226/115029451-9f299780-9ee3-11eb-9444-63645d53d2cd.png)
+
