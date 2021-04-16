@@ -188,10 +188,9 @@ The model endpoint is tested using a sample of row values in the test dataset. T
 
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-- A working model
-- Demo of the deployed  model
-- Demo of a sample request sent to the endpoint and its response
+https://www.youtube.com/watch?v=lyTwnFrMKms
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/lyTwnFrMKms/0.jpg)](https://www.youtube.com/watch?v=lyTwnFrMKms)
 
 ## Future Improvements
 Benchmarking can be done using Apache Benchmark command-line tool to keep the performance of the model in check and above a standard level. It is used to determine the response time in seconds for the model that is deployed. Additionally, you could try different models to get the best possible one. If we reduced the duration of the experiment or increased the number of processes running in parallel then the experiment will be fast and time can be save - however resource costs may increase. The use of the Kubernetes service can be helpful in case we add more data to the existing dataset. Lastly, the exploration of possibly using Deep Learning to get to a more accurate model. Lastly, it would be even better if we could get more data records from electronic health records. This project took approximately 5 hours to complete.
