@@ -105,7 +105,6 @@ The results of the AutoML run was the 'Voting Ensemble' model achievening a peak
 
 #### RunDetails widget output
 ![image](https://user-images.githubusercontent.com/81923226/115025876-7dc6ac80-9edf-11eb-9512-8080cddfe8f7.png)
-![image](https://user-images.githubusercontent.com/81923226/115025895-828b6080-9edf-11eb-9b45-4328fbcb6a4b.png)
 
 
 ## Hyperparameter Tuning
