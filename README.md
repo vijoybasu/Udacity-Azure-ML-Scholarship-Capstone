@@ -94,7 +94,29 @@ automl_config = AutoMLConfig(compute_target = compute_target, task = 'classifica
 
 ### Results of AutoML Run
 
-The results of the AutoML run was the 'Voting Ensemble' model achievening a peak accuracy of `0.87`
+The results of the AutoML run was the 'Voting Ensemble' model achievening a peak accuracy of `0.87` with below parameters obtained as the best ones.
+
+```python
+min_child_weight=1,
+missing=nan,
+n_estimators=50,
+n_jobs=1,
+nthread=None,
+objective='reg:logistic',
+random_state=0,
+reg_alpha=1.875,
+reg_lambda=0.20833333333333334,
+scale_pos_weight=1,
+seed=None,
+silent=None,
+subsample=0.6,
+tree_method='auto',
+verbose=-10,
+verbosity=0))],
+verbose=False))],
+flatten_transform=None,
+weights=[0.375, 0.125, 0.125,0.125, 0.125,0.125]
+```
 
 ![image](https://user-images.githubusercontent.com/81923226/115025552-20326000-9edf-11eb-9cf5-4950cc8501bb.png)
 ![image](https://user-images.githubusercontent.com/81923226/115025758-5bcd2a00-9edf-11eb-975b-7283966f32e8.png)
