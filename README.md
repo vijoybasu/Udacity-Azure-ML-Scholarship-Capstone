@@ -122,9 +122,11 @@ flatten_transform=None,
 weights=[0.375, 0.125, 0.125,0.125, 0.125,0.125]
 ```
 
+#### AutoML runs various model as shown below, but clearly Voting Ensemble outranks all. (Running Status)
 ![image](https://user-images.githubusercontent.com/81923226/115025552-20326000-9edf-11eb-9cf5-4950cc8501bb.png)
+#### AutoML runs various model as shown below, but clearly Voting Ensemble outranks all. (Completed Status)
 ![image](https://user-images.githubusercontent.com/81923226/115025758-5bcd2a00-9edf-11eb-975b-7283966f32e8.png)
-
+#### The below displays the best metrics obtained from our Voting Ensemble model, with an accuracy of 0.87 among other crucial metrics.
 ![image](https://user-images.githubusercontent.com/81923226/115025441-fed17400-9ede-11eb-9de2-55549bcf01d7.png)
 #### Confirming the accuracy of the model in the Azure Portal.
 ![image](https://user-images.githubusercontent.com/81923226/115025599-304a3f80-9edf-11eb-981b-ad696c17eb80.png)
@@ -179,13 +181,18 @@ The model could be further improved by playing around with more hyper-parameters
 
 #### Accuracy of 0.92 achieved.
 ![image](https://user-images.githubusercontent.com/81923226/115027205-0a259f00-9ee1-11eb-8476-f273812c09af.png)
+#### Various accuracies plotted against various runs of combination of parameters being used.
 ![image](https://user-images.githubusercontent.com/81923226/115027229-13167080-9ee1-11eb-8406-7d8934e62012.png)
+#### Parallel coordinates chart, displaying the dynamic nature of changing parameters and how it effects the other parameters, with regards to the accuracy.
 ![image](https://user-images.githubusercontent.com/81923226/115027278-2295b980-9ee1-11eb-81f7-c3010b32601a.png)
+#### 3D Scatterplot of the feature space with accuracy.
 ![image](https://user-images.githubusercontent.com/81923226/115027290-275a6d80-9ee1-11eb-900a-afc5a790dc42.png)
 
 #### RunDetails widget output
 ![image](https://user-images.githubusercontent.com/81923226/115027306-2c1f2180-9ee1-11eb-831c-688da188f4d1.png)
+#### Best Run Model displayed with link to Azure MLS and also, best parameters obtained from the HyperDrive config run are displayed below.
 ![image](https://user-images.githubusercontent.com/81923226/115027356-3d682e00-9ee1-11eb-90c6-ef99e2127907.png)
+#### Model is registered as "best_hd_run" and we now proceed for Model Deployment.
 ![image](https://user-images.githubusercontent.com/81923226/115027370-435e0f00-9ee1-11eb-9845-3b65a12d1fc3.png)
 
 
@@ -197,17 +204,23 @@ We shall go ahead and deploy this particular model and test the endpoint.
 #### Deployment Screenshots as below:
 
 ![image](https://user-images.githubusercontent.com/81923226/115027501-6c7e9f80-9ee1-11eb-8e0c-d0468e8158b0.png)
+#### We check on the Azure Portal for deployment in progress.
 ![image](https://user-images.githubusercontent.com/81923226/115027514-70aabd00-9ee1-11eb-8e4a-e990233321e8.png)
+#### Deployment now completes and we check for the same on the Azure Machine Learning Services.
 ![image](https://user-images.githubusercontent.com/81923226/115027520-73a5ad80-9ee1-11eb-81aa-e9e720f066c2.png)
+#### We check to make sure we have the rest endpoint with the Application Insights URL to track our model performance and other model parameters.
 ![image](https://user-images.githubusercontent.com/81923226/115027531-77393480-9ee1-11eb-9e05-35379434c542.png)
+#### The Status Code obtained from the Model Service is : 200 which means OK.
 ![image](https://user-images.githubusercontent.com/81923226/115027543-7accbb80-9ee1-11eb-8d01-75f8f11eac66.png)
 ![image](https://user-images.githubusercontent.com/81923226/115027557-7ef8d900-9ee1-11eb-94ee-25adb7617881.png)
+#### We obtain the Swagger URI & the Scoring URI from the deployed model in service.
 ![image](https://user-images.githubusercontent.com/81923226/115027703-ab145a00-9ee1-11eb-8445-26eb13d78e68.png)
 
 
 #### Testing Model Endpoint
 
 The model endpoint is tested using a sample of row values in the test dataset. The output is obtained as `[1,0]` indicating that the said person will indeed have a death event owing to his physical factors.
+
 ![image](https://user-images.githubusercontent.com/81923226/115027967-f9295d80-9ee1-11eb-8972-e9aabce8fd43.png)
 
 
