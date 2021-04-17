@@ -177,6 +177,7 @@ The HyperDrive Run with SK Learn's Logistic Regression was able to achieve a bet
 The model could be further improved by playing around with more hyper-parameters of Logistic Regression such as penalty,class_weight, n_jobs etc.
 
 ![image](https://user-images.githubusercontent.com/81923226/115027181-03972780-9ee1-11eb-9e6f-cbba1015c882.png)
+#### Best Model Run displayed and also is displayed the best parameters obtained from the HyperDrive run.
 ![image](https://user-images.githubusercontent.com/81923226/115029797-f9c2f380-9ee3-11eb-91c7-b4f41e96829a.png)
 
 #### Accuracy of 0.92 achieved.
