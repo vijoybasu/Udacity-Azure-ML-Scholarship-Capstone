@@ -96,6 +96,10 @@ automl_config = AutoMLConfig(compute_target = compute_target, task = 'classifica
 
 The results of the AutoML run was the 'Voting Ensemble' model achievening a peak accuracy of `0.87` with below parameters obtained as the best ones.
 
+A voting ensemble (or a “majority voting ensemble“) is an ensemble machine learning model that combines the predictions from multiple other models. It is a technique that may be used to improve model performance, ideally achieving better performance than any single model used in the ensemble.
+
+It is observed that Voting Ensemble uses a logistic regression model with multiple weights and then chooses or "votes" them to select the best one.
+
 ```python
 min_child_weight=1,
 missing=nan,
