@@ -144,7 +144,6 @@ hyperdrive_run_config = HyperDriveConfig(run_config=estimator, hyperparameter_sa
 ```
 
 ### Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 
 The HyperDrive Run with SK Learn's Logistic Regression was able to achieve a better accuracy of `0.92`. 
 The model could be further improved by playing around with more hyper-parameters of Logistic Regression such as penalty,class_weight, n_jobs etc.
@@ -165,7 +164,6 @@ The model could be further improved by playing around with more hyper-parameters
 
 
 ## Model Deployment
-
 We compare and it is clearly seen that the model obtained by the HyperDrive config run obtains an accuracy of `0.92` using the SKLearn's Logistic Regression.
 
 We shall go ahead and deploy this particular model and test the endpoint.
